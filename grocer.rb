@@ -55,8 +55,8 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(coupon_cart)
   keys = final_cart.keys
   total = 0.0
-  keys.each do |total|
-    total += keys[:price] * keys[:count]
+  keys.each do |x|
+    total += keys[x][:price] * keys[x][:count]
     total.round(2)
   end
   if total > 100.0
