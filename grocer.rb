@@ -56,7 +56,7 @@ def checkout(cart, coupons)
   keys = final_cart.keys
   total = 0.0
   keys.each do |x|
-    total += keys[x][:price] * keys[x][:count]
+    total += final_cart[x][:price] * final_cart[x][:count]
     total.round(2)
   end
   if total > 100.0
